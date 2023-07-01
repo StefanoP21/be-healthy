@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".UpdateActivity">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal"
+            android:padding="20dp"
+            android:background="@drawable/teal_border">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Editar Información"
+                android:textSize="30sp"
+                android:textAlignment="center"
+                android:textColor="@color/teal_700" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:src="@drawable/upload"
+                android:id="@+id/update_image"
+                android:layout_marginTop="20dp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:id="@+id/update_title"
+                android:background="@drawable/teal_border"
+                android:layout_marginTop="20dp"
+                android:padding="16dp"
+                android:hint="Ingrese el título"
+                android:gravity="start|center_vertical"
+                android:textColor="@color/teal" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:id="@+id/update_desc"
+                android:background="@drawable/teal_border"
+                android:layout_marginTop="20dp"
+                android:padding="16dp"
+                android:hint="Ingrese descripción"
+                android:gravity="start|center_vertical"
+                android:textColor="@color/teal" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:id="@+id/update_time"
+                android:background="@drawable/teal_border"
+                android:layout_marginTop="20dp"
+                android:padding="16dp"
+                android:hint="Ingrese la fecha"
+                android:gravity="start|center_vertical"
+                android:textColor="@color/teal" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="ACTUALIZAR"
+                android:id="@+id/update_button"
+                android:textSize="18sp"
+                android:layout_marginTop="30dp"
+                app:cornerRadius="20dp" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</ScrollView>
