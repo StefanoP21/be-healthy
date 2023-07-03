@@ -26,11 +26,11 @@ public class SignupActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
 
-        signupName = findViewById(R.id.update_name);
-        signupEmail = findViewById(R.id.update_email);
-        signupUsername = findViewById(R.id.update_username);
-        signupPassword = findViewById(R.id.update_password);
-        signupButton = findViewById(R.id.updateprofile_button);
+        signupName = findViewById(R.id.signup_name);
+        signupEmail = findViewById(R.id.signup_email);
+        signupUsername = findViewById(R.id.signup_username);
+        signupPassword = findViewById(R.id.signup_password);
+        signupButton = findViewById(R.id.signup_button);
         loginRedirectText = findViewById(R.id.loginRedirectText);
 
         signupButton.setOnClickListener(new View.OnClickListener() {

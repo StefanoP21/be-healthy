@@ -2,12 +2,10 @@ package com.example.behealthy;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
@@ -34,10 +32,9 @@ public class UserUpdateActivity extends AppCompatActivity {
 
         updateNom = (EditText) findViewById(R.id.update_name);
         updateCon = (EditText) findViewById(R.id.update_password);
-        updateUsu = (EditText) findViewById(R.id.update_username);
         updateCorreo = (EditText) findViewById(R.id.update_email);
         nombre = (EditText) findViewById(R.id.edtNom);
-        updateProfileButton = (Button) findViewById(R.id.updateprofile_button);
+        updateProfileButton = (Button) findViewById(R.id.updateUser_Button);
     }
 
     public void checkIfUserExists(View view) {
@@ -74,7 +71,6 @@ public class UserUpdateActivity extends AppCompatActivity {
             public void onDataChange(DataSnapshot dataSnapshot) {
                 if (dataSnapshot.exists()) {
                     dataSnapshot.getRef().child("name").setValue(updateNom.getText().toString().trim());
-                    dataSnapshot.getRef().child("username").setValue(updateUsu.getText().toString().trim());
                     dataSnapshot.getRef().child("password").setValue(updateCon.getText().toString().trim());
                     dataSnapshot.getRef().child("email").setValue(updateCorreo.getText().toString().trim());
 

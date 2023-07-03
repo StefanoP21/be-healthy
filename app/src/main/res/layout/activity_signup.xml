@@ -38,7 +38,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:id="@+id/update_name"
+                android:id="@+id/signup_name"
                 android:background="@drawable/teal_border"
                 android:layout_marginTop="30dp"
                 android:padding="10dp"
@@ -50,7 +50,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:id="@+id/update_email"
+                android:id="@+id/signup_email"
                 android:background="@drawable/teal_border"
                 android:layout_marginTop="20dp"
                 android:padding="10dp"
@@ -62,7 +62,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:id="@+id/update_username"
+                android:id="@+id/signup_username"
                 android:background="@drawable/teal_border"
                 android:layout_marginTop="20dp"
                 android:padding="10dp"
@@ -74,7 +74,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:id="@+id/update_password"
+                android:id="@+id/signup_password"
                 android:background="@drawable/teal_border"
                 android:layout_marginTop="20dp"
                 android:padding="10dp"
@@ -88,7 +88,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:text="REGISTRARSE"
-                android:id="@+id/updateprofile_button"
+                android:id="@+id/signup_button"
                 android:layout_marginTop="30dp"
                 android:textSize="18sp"
                 app:cornerRadius="20dp" />
