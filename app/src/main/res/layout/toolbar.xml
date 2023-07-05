@@ -14,5 +14,4 @@
         android:id="@+id/menu"
         android:src="@drawable/baseline_format_list_bulleted_24"/>
 
-
 </LinearLayout>

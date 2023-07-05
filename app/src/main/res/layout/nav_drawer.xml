@@ -15,7 +15,6 @@
         android:background="@drawable/header_bkg"
         android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
-
     </LinearLayout>
 
     <LinearLayout

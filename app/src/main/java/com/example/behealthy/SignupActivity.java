@@ -36,20 +36,24 @@ public class SignupActivity extends AppCompatActivity {
         signupButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                database = FirebaseDatabase.getInstance();
-                reference = database.getReference("users");
+                if (!validateName() | !validateEmail() | !validateUsername() | !validatePassword()) {
 
-                String name = signupName.getText().toString();
-                String email = signupEmail.getText().toString();
-                String username = signupUsername.getText().toString();
-                String password = signupPassword.getText().toString();
+                } else {
+                    database = FirebaseDatabase.getInstance();
+                    reference = database.getReference("users");
 
-                HelperClass helperClass = new HelperClass(name, email, username, password);
-                reference.child(username).setValue(helperClass);
+                    String name = signupName.getText().toString();
+                    String email = signupEmail.getText().toString();
+                    String username = signupUsername.getText().toString();
+                    String password = signupPassword.getText().toString();
 
-                Toast.makeText(SignupActivity.this, "Te has registrado correctamente", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(SignupActivity.this, LoginActivity.class);
-                startActivity(intent);
+                    HelperClass helperClass = new HelperClass(name, email, username, password);
+                    reference.child(username).setValue(helperClass);
+
+                    Toast.makeText(SignupActivity.this, "Te has registrado correctamente", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(SignupActivity.this, LoginActivity.class);
+                    startActivity(intent);
+                }
             }
         });
 
@@ -61,4 +65,49 @@ public class SignupActivity extends AppCompatActivity {
             }
         });
     }
+
+    public Boolean validateName() {
+        String val = signupName.getText().toString();
+        if (val.isEmpty()) {
+            signupName.setError("El nombre no puede estar vacío");
+            return false;
+        } else {
+            signupName.setError(null);
+            return true;
+        }
+    }
+
+    public Boolean validateEmail() {
+        String val = signupEmail.getText().toString();
+        if (val.isEmpty()) {
+            signupEmail.setError("El correo no puede estar vacío");
+            return false;
+        } else {
+            signupEmail.setError(null);
+            return true;
+        }
+    }
+
+    public Boolean validateUsername() {
+        String val = signupUsername.getText().toString();
+        if (val.isEmpty()) {
+            signupUsername.setError("El nombre de usuario no puede estar vacío");
+            return false;
+        } else {
+            signupUsername.setError(null);
+            return true;
+        }
+    }
+
+    public Boolean validatePassword() {
+        String val = signupPassword.getText().toString();
+        if (val.isEmpty()) {
+            signupPassword.setError("La contraseña no puede estar vacía");
+            return false;
+        } else {
+            signupPassword.setError(null);
+            return true;
+        }
+    }
+
 }

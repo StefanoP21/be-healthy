@@ -27,9 +27,6 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
-import java.text.DateFormat;
-import java.util.Calendar;
-import java.util.Objects;
 import java.util.UUID;
 
 public class UploadActivity extends AppCompatActivity {
@@ -117,10 +114,7 @@ public class UploadActivity extends AppCompatActivity {
         String time = uploadTime.getText().toString();
 
         DataClass dataClass = new DataClass(title, desc, time, imageURL);
-
         // Para actualizar los datos en la base de datos
-        // UUID.randomUUID().toString()
-        //String currentDate = DateFormat.getDateInstance().format(Calendar.getInstance().getTime());
         String id = UUID.randomUUID().toString();
 
         FirebaseDatabase.getInstance().getReference("Activities").child(id).setValue(dataClass).addOnCompleteListener(new OnCompleteListener<Void>() {

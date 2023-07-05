@@ -25,7 +25,6 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
-import com.google.firebase.storage.StorageReference;
 
 public class ProfileActivity extends AppCompatActivity {
     Button updateProfileButton;
@@ -78,8 +77,8 @@ public class ProfileActivity extends AppCompatActivity {
                 redirectActivity(ProfileActivity.this, HomeActivity.class);
             }
         });
-
     }
+
     public static void  openDrawer(DrawerLayout drawerLayout){
         drawerLayout.openDrawer(GravityCompat.START);
     }
