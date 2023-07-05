@@ -63,8 +63,10 @@ public class ProfileActivity extends AppCompatActivity {
             updateNom.setText(bundle.getString("name"));
             updateCon.setText(bundle.getString("password"));
             updateCorreo.setText(bundle.getString("email"));
-            key = bundle.getString("key");
+            key = bundle.getString(usuario.getText().toString().trim());
         }
+
+
 
 
         menu.setOnClickListener(new View.OnClickListener() {
