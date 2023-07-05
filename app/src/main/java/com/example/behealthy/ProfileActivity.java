@@ -28,14 +28,9 @@ import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.StorageReference;
 
 public class ProfileActivity extends AppCompatActivity {
-
-
     Button updateProfileButton;
     EditText updateNom, updateCon, updateCorreo, usuario;
-
     String key;
-
-
     DrawerLayout drawerLayout;
     ImageView menu;
     LinearLayout home, profile;
@@ -56,7 +51,6 @@ public class ProfileActivity extends AppCompatActivity {
         usuario = (EditText) findViewById(R.id.edtNom);
         updateProfileButton = (Button) findViewById(R.id.updateUser_Button);
 
-
         Bundle bundle = getIntent().getExtras();
         if (bundle != null){
             Glide.with(ProfileActivity.this);
@@ -65,9 +59,6 @@ public class ProfileActivity extends AppCompatActivity {
             updateCorreo.setText(bundle.getString("email"));
             key = bundle.getString(usuario.getText().toString().trim());
         }
-
-
-
 
         menu.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -130,8 +121,6 @@ public class ProfileActivity extends AppCompatActivity {
         });
     }
 
-
-
     public void updateUser(View view) {
         String username  =  usuario.getText().toString().trim();
         String name   = updateNom.getText().toString().trim();
@@ -145,8 +134,12 @@ public class ProfileActivity extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
                 if (task.isSuccessful()){
-
                     Toast.makeText(ProfileActivity.this, "Datos Actualizados", Toast.LENGTH_SHORT).show();
+                    // limpiar campos
+                    updateNom.setText("");
+                    updateCon.setText("");
+                    updateCorreo.setText("");
+                    usuario.setText("");
                 }
             }
         }).addOnFailureListener(new OnFailureListener() {

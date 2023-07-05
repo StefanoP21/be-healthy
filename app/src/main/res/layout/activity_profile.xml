@@ -44,7 +44,7 @@
                     android:id="@+id/edtNom"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:layout_marginTop="30dp"
+                    android:layout_marginTop="20dp"
                     android:background="@drawable/teal_border"
                     android:drawableLeft="@drawable/baseline_person_pin_24"
                     android:drawablePadding="10dp"
@@ -57,7 +57,7 @@
                     android:id="@+id/btnValidar"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:layout_marginTop="30dp"
+                    android:layout_marginTop="20dp"
                     android:onClick="checkIfUserExists"
                     android:text="VALIDAR" />
 
@@ -65,7 +65,7 @@
                     android:id="@+id/update_name"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:layout_marginTop="30dp"
+                    android:layout_marginTop="20dp"
                     android:background="@drawable/teal_border"
                     android:drawableLeft="@drawable/baseline_person_24"
                     android:drawablePadding="10dp"
@@ -76,7 +76,7 @@
                     android:id="@+id/update_password"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:layout_marginTop="30dp"
+                    android:layout_marginTop="10dp"
                     android:background="@drawable/teal_border"
                     android:drawableLeft="@drawable/baseline_lock_24"
                     android:drawablePadding="10dp"
@@ -90,7 +90,7 @@
                     android:id="@+id/update_email"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:layout_marginTop="30dp"
+                    android:layout_marginTop="10dp"
                     android:background="@drawable/teal_border"
                     android:drawableLeft="@drawable/baseline_email_24"
                     android:drawablePadding="10dp"
@@ -102,7 +102,7 @@
                     android:id="@+id/updateUser_Button"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:layout_marginTop="30dp"
+                    android:layout_marginTop="20dp"
                     android:onClick="updateUser"
                     android:text="ACTUALIZAR" />
 
