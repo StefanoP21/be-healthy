@@ -34,50 +34,70 @@
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/update_name"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:hint="Ingrese Nombre"
-                android:inputType="text" />
-
-            <EditText
-                android:id="@+id/update_password"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:hint="Ingrese Password"
-                android:inputType="text" />
-
-            <EditText
-                android:id="@+id/update_email"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:hint="Ingrese Email"
-                android:inputType="text" />
-
-            <Button
-                android:id="@+id/updateUser_Button"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:onClick="updatePefil"
-                android:text="ACTUALIZAR" />
-
-            <EditText
                 android:id="@+id/edtNom"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/teal_border"
+                android:drawableLeft="@drawable/baseline_person_pin_24"
+                android:drawablePadding="10dp"
                 android:ems="10"
                 android:hint="Ingrese Usuario"
-                android:inputType="text" />
+                android:inputType="text"
+                android:padding="10dp" />
 
             <Button
                 android:id="@+id/btnValidar"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginTop="30dp"
                 android:onClick="checkIfUserExists"
                 android:text="VALIDAR" />
+
+            <EditText
+                android:id="@+id/update_name"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/teal_border"
+                android:drawableLeft="@drawable/baseline_person_24"
+                android:drawablePadding="10dp"
+                android:hint="Ingrese Nombre"
+                android:padding="10dp" />
+
+            <EditText
+                android:id="@+id/update_password"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/teal_border"
+                android:drawableLeft="@drawable/baseline_lock_24"
+                android:drawablePadding="10dp"
+                android:ems="10"
+                android:hint="Ingrese Password"
+                android:inputType="text"
+                android:padding="10dp"
+                android:password="true" />
+
+            <EditText
+                android:id="@+id/update_email"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/teal_border"
+                android:drawableLeft="@drawable/baseline_email_24"
+                android:drawablePadding="10dp"
+                android:hint="Ingrese Email"
+                android:inputType="text"
+                android:padding="10dp" />
+
+            <Button
+                android:id="@+id/updateUser_Button"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="30dp"
+                android:onClick="updateData"
+                android:text="ACTUALIZAR" />
 
         </LinearLayout>
 
